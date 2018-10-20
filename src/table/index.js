@@ -1,30 +1,26 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
-import DataStore from '@data/DataStore'
+import { DataStore } from '@data'
+import { TableBody, TableHeader, TableWrapper } from '@presentation'
 
-export default ({ rowData, colDefs }) => {
+
+const StableTable = ({ rowData, colDefs }) => {
   console.log('stableTable')
-
   return (
     <DataStore rowData={rowData}>
       {rows => {
         return (
-          <Fragment>
+          <TableWrapper>
             <h3>Hi</h3>
             <table>
-              <tbody>
-                {rows.map((row, i) => {
-                  return (
-                    <tr key={i}>
-                      <td>Here is the data: {JSON.stringify(row)}</td>
-                    </tr>
-                  )
-                })}
-              </tbody>
+              <TableHeader colDefs={colDefs} />
+              <TableBody rows={rows} colDefs={colDefs} />
             </table>
-          </Fragment>
+          </TableWrapper>
         )
       }}
     </DataStore>
   )
 }
+
+export default StableTable
