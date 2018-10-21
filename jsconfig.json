@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+      "target": "ES6",
+      "baseUrl": "src",
+      "module": "commonjs",
+      "paths": {
+        "@data/*": ["table/data/*"],
+        "@examples/*": ["examples/*"],
+        "@presentation/*": ["table/presentation/*"],
+        "@table/*": ["table/*"]
+      }
+  },
+  "exclude": [
+      "node_modules",
+      "**/node_modules/*"
+  ]
+}

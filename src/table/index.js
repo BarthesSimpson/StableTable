@@ -3,17 +3,16 @@ import React from 'react'
 import { DataStore } from '@data'
 import { TableBody, TableHeader, TableWrapper } from '@presentation'
 
-
 const StableTable = ({ rowData, colDefs }) => {
-  console.log('stableTable')
+  // console.log('stableTable: ', { rowData, colDefs })
   return (
     <DataStore rowData={rowData}>
-      {rows => {
+      {({ rows, sortByField }) => {
         return (
           <TableWrapper>
             <h3>Hi</h3>
             <table>
-              <TableHeader colDefs={colDefs} />
+              <TableHeader colDefs={colDefs} sortByField={sortByField} />
               <TableBody rows={rows} colDefs={colDefs} />
             </table>
           </TableWrapper>

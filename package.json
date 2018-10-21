@@ -13,7 +13,8 @@
     "analyze": "export NODE_ENV=production && export ANALYZE_BUNDLE=true && webpack",
     "build": "export NODE_ENV=production && webpack",
     "start": "export NODE_ENV=development && webpack-dev-server --hot",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "jest": {
     "globals": {

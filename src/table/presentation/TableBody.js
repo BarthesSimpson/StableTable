@@ -7,7 +7,9 @@ const TableBody = ({ rows, colDefs }) => (
         <tr key={i}>
           {colDefs.map(({ field }) => {
             return (
-              <td key={field}>{row.hasOwnProperty(field) ? row[field] : ''}</td>
+              <td key={field}>
+                {row.hasOwnProperty(field) ? row[field].toString() : ''}
+              </td>
             )
           })}
         </tr>
