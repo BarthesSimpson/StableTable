@@ -6,13 +6,23 @@ const TableWrapper = styled.div`
     margin: 50px;
     td,
     th {
-      padding: 10px;
       text-align: left;
     }
+    td {
+      padding: 0.25em;
+    }
   }
-    
+
+  tbody tr:hover {
+    background: #ddd;
+  }
+
   tbody tr:nth-child(odd) {
     background: #eee;
+    :hover {
+      background: #ddd;
+    }
+  }
 `
 
 export default TableWrapper

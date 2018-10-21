@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import FilterBar from '@presentation/FilterBar'
+
 const SortedIcon = styled.span`
   font-size: 0.5em;
   line-height: 2em;
   padding-left: 1em;
   box-sizing: border-box;
 `
+SortedIcon.displayName = 'SortedIcon'
 
 const TableHeader = ({ colDefs, sortByField }) => (
   <thead>
@@ -21,6 +24,7 @@ const TableHeader = ({ colDefs, sortByField }) => (
         )
       })}
     </tr>
+    <FilterBar colDefs={colDefs} />
   </thead>
 )
 
