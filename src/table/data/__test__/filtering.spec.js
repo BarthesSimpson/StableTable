@@ -1,6 +1,7 @@
 import { filterRowsOnField } from '@data/filtering'
 
-import { rowData } from '@examples/boringExample'
+import data from '@examples/data/boring'
+const { rowData } = data
 
 describe('Filtering tests', () => {
   it('Filters text rows', () => {
@@ -28,7 +29,7 @@ describe('Filtering tests', () => {
   })
   it('Filters boolean rows', () => {
     expect(
-        filterRowsOnField({
+      filterRowsOnField({
         rows: [...rowData],
         field: 'introverted',
         value: true

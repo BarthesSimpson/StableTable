@@ -4,7 +4,6 @@ import { DataStore } from '@data'
 import { TableBody, TableHeader, TableWrapper } from '@presentation'
 
 const StableTable = ({ rowData, colDefs }) => {
-  // console.log('stableTable: ', { rowData, colDefs })
   return (
     <DataStore rowData={rowData}>
       {({ rows, sortByField, filterOnField }) => {

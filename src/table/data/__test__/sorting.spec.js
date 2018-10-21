@@ -1,6 +1,7 @@
 import { sortRowsByField } from '@data/sorting'
 
-import { rowData } from '@examples/boringExample'
+import data from '@examples/data/boring'
+const { rowData } = data
 
 describe('Sorting tests', () => {
   it('Sorts numbers in ascending order', () => {

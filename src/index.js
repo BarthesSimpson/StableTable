@@ -1,13 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Table from '@table'
-import { rowData, colDefs } from '@examples/boringExample'
+import Examples from '@examples'
 
-const example = (
-  <div style={{ maxWidth: '100%' }}>
-    <Table rowData={rowData} colDefs={colDefs} />
-  </div>
-)
-
-ReactDOM.render(example, document.getElementById('vortex'))
+ReactDOM.render(<Examples />, document.getElementById('vortex'))

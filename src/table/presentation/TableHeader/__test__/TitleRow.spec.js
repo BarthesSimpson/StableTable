@@ -3,7 +3,8 @@ import { render, fireEvent, cleanup } from 'react-testing-library'
 import 'jest-dom/extend-expect'
 
 import Table from '@table'
-import { rowData, colDefs } from '@examples/boringExample'
+import data from '@examples/data/boring'
+const { rowData, colDefs } = data
 
 const testTable = () => <Table rowData={rowData} colDefs={colDefs} />
 afterEach(cleanup)

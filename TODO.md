@@ -1,7 +1,6 @@
 # StableTable:TODO
 
-1. Add multi-filtering
-3. Add tree data rendering
+1. Add tree data rendering
 
 ## Later
 
