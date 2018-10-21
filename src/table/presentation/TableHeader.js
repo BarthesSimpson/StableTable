@@ -1,4 +1,12 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const SortedIcon = styled.span`
+  font-size: 0.5em;
+  line-height: 2em;
+  padding-left: 1em;
+  box-sizing: border-box;
+`
 
 const TableHeader = ({ colDefs, sortByField }) => (
   <thead>
@@ -37,7 +45,15 @@ class HeaderCell extends React.Component {
 
   render() {
     const { header } = this.props
-    return <th onClick={this.clickSort}>{header}</th>
+    const { sorted } = this.state
+    return (
+      <th onClick={this.clickSort}>
+        {header}
+        <SortedIcon>
+          {sorted === 'ascending' ? '▲' : sorted === 'descending' ? '▼' : '   '}
+        </SortedIcon>
+      </th>
+    )
   }
 }
 
