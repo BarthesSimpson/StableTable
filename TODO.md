@@ -1,6 +1,8 @@
 # StableTable:TODO
 
-1. Add tree data rendering
+1. Add indent and icons for tree data
+2. Add tests for tree data
+3. Improve the row stripes for tree data
 
 ## Later
 
