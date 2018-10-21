@@ -1,22 +1,21 @@
 import React from 'react'
 
-import { DataStore } from '@data'
+import { DataStore, TreeData } from '@data'
 import { TableBody, TableHeader, TableWrapper } from '@presentation'
 
-const StableTable = ({ rowData, colDefs }) => {
+const StableTable = ({ rowData, colDefs, tableOptions: { groupBy } }) => {
   return (
     <DataStore rowData={rowData}>
       {({ rows, sortByField, filterOnField }) => {
         return (
           <TableWrapper>
-            <h3>Hi</h3>
             <table>
               <TableHeader
                 colDefs={colDefs}
                 sortByField={sortByField}
                 filterOnField={filterOnField}
               />
-              <TableBody rows={rows} colDefs={colDefs} />
+              <TableBody rows={rows} colDefs={colDefs} groupBy={groupBy} />
             </table>
           </TableWrapper>
         )

@@ -1,20 +1,13 @@
 import React from 'react'
+import { FlatData, TreeData } from '@data'
 
-const TableBody = ({ rows, colDefs }) => (
+const TableBody = ({ rows, colDefs, groupBy }) => (
   <tbody>
-    {rows.map((row, i) => {
-      return (
-        <tr key={i}>
-          {colDefs.map(({ field }) => {
-            return (
-              <td key={field}>
-                {row.hasOwnProperty(field) ? row[field].toString() : ''}
-              </td>
-            )
-          })}
-        </tr>
-      )
-    })}
+    {groupBy ? (
+      <TreeData rows={rows} colDefs={colDefs} groupBy={groupBy} />
+    ) : (
+      <FlatData rows={rows} colDefs={colDefs} />
+    )}
   </tbody>
 )
 

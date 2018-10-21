@@ -4,9 +4,8 @@ import 'jest-dom/extend-expect'
 
 import Table from '@table'
 import data from '@examples/data/boring'
-const { rowData, colDefs } = data
 
-const testTable = () => <Table rowData={rowData} colDefs={colDefs} />
+const testTable = () => <Table {...data} />
 afterEach(cleanup)
 
 describe('FilterBar tests', () => {

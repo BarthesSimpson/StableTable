@@ -38,4 +38,6 @@ const colDefs = [
   { header: 'Introverted', field: 'introverted' }
 ]
 
-export default { rowData, colDefs }
+const tableOptions = {}
+
+export default { rowData, colDefs, tableOptions }

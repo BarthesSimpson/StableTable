@@ -1,15 +1,15 @@
 const rowData = [
   {
     name: 'Mo Willems Characters',
-    path: ['Mo Willems Characters']
+    parents: []
   },
   {
     name: 'Avian',
-    path: ['Mo Willems Characters', 'Avian']
+    parents: ['Mo Willems Characters']
   },
   {
-    name: 'Avian',
-    path: ['Mo Willems Characters', 'Mamallian']
+    name: 'Mammalian',
+    parents: ['Mo Willems Characters']
   },
   {
     name: 'Pigeon',
@@ -18,7 +18,7 @@ const rowData = [
     ambition: 'F.I.R.E',
     friends: -1,
     introverted: false,
-    path: ['Mo Willems Characters', 'Avian', 'Pigeon']
+    parents: ['Mo Willems Characters', 'Avian']
   },
   {
     name: 'Gerald',
@@ -27,7 +27,7 @@ const rowData = [
     ambition: 'Enter Jet Set',
     friends: 9,
     introverted: true,
-    path: ['Mo Willems Characters', 'Mammalian', 'Gerald']
+    parents: ['Mo Willems Characters', 'Mammalian']
   },
   {
     name: 'Piggie',
@@ -36,7 +36,7 @@ const rowData = [
     ambition: 'Lunch',
     friends: 3,
     introverted: false,
-    path: ['Mo Willems Characters', 'Mammalian', 'Gerald']
+    parents: ['Mo Willems Characters', 'Mammalian']
   }
 ]
 
@@ -53,4 +53,6 @@ const colDefs = [
   { header: 'Introverted', field: 'introverted' }
 ]
 
-export default { rowData, colDefs }
+const tableOptions = { groupBy: 'name' }
+
+export default { rowData, colDefs, tableOptions }

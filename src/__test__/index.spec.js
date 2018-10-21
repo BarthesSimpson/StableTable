@@ -4,6 +4,6 @@ import Table from '@table'
 
 describe('Smoke test', () => {
   it('works', () => {
-    render(<Table rowData={[]} colDefs={[]} />)
+    render(<Table rowData={[]} colDefs={[]} tableOptions={{}} />)
   })
 })

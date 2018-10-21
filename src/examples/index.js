@@ -21,10 +21,15 @@ const Examples = () => (
   </BrowserRouter>
 )
 
-const Example = ({ example, i }) => (
+const Example = ({ example }) => (
   <Route
     path={`/${example}`}
-    component={() => <Table {...examplesData[example]} />}
+    component={() => (
+      <Fragment>
+        <h3 style={{ marginLeft: '50px' }}>{`${example} Example`}</h3>
+        <Table {...examplesData[example]} />
+      </Fragment>
+    )}
   />
 )
 
