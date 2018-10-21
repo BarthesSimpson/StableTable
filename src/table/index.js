@@ -7,12 +7,16 @@ const StableTable = ({ rowData, colDefs }) => {
   // console.log('stableTable: ', { rowData, colDefs })
   return (
     <DataStore rowData={rowData}>
-      {({ rows, sortByField }) => {
+      {({ rows, sortByField, filterOnField }) => {
         return (
           <TableWrapper>
             <h3>Hi</h3>
             <table>
-              <TableHeader colDefs={colDefs} sortByField={sortByField} />
+              <TableHeader
+                colDefs={colDefs}
+                sortByField={sortByField}
+                filterOnField={filterOnField}
+              />
               <TableBody rows={rows} colDefs={colDefs} />
             </table>
           </TableWrapper>

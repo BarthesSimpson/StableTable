@@ -24,5 +24,6 @@ const TableWrapper = styled.div`
     }
   }
 `
+TableWrapper.displayName = 'TableWrapper'
 
 export default TableWrapper

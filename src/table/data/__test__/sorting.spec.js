@@ -2,7 +2,7 @@ import { sortRowsByField } from '@data/sorting'
 
 import { rowData } from '@examples/boringExample'
 
-describe('Sorting test', () => {
+describe('Sorting tests', () => {
   it('Sorts numbers in ascending order', () => {
     expect(
       sortRowsByField({ rows: [...rowData], field: 'friends' }).map(

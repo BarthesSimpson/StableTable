@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import FilterBar from '@presentation/FilterBar'
-
 const SortedIcon = styled.span`
   font-size: 0.5em;
   line-height: 2em;
@@ -11,21 +9,18 @@ const SortedIcon = styled.span`
 `
 SortedIcon.displayName = 'SortedIcon'
 
-const TableHeader = ({ colDefs, sortByField }) => (
-  <thead>
-    <tr>
-      {colDefs.map(({ field, header }, i) => {
-        return (
-          <HeaderCell
-            key={i}
-            header={header}
-            sort={({ descending }) => sortByField({ field, descending })}
-          />
-        )
-      })}
-    </tr>
-    <FilterBar colDefs={colDefs} />
-  </thead>
+const TitleRow = ({ colDefs, sortByField }) => (
+  <tr>
+    {colDefs.map(({ field, header }, i) => {
+      return (
+        <HeaderCell
+          key={i}
+          header={header}
+          sort={({ descending }) => sortByField({ field, descending })}
+        />
+      )
+    })}
+  </tr>
 )
 
 class HeaderCell extends React.Component {
@@ -61,4 +56,4 @@ class HeaderCell extends React.Component {
   }
 }
 
-export default TableHeader
+export default TitleRow
