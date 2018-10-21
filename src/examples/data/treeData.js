@@ -41,7 +41,6 @@ const rowData = [
 ]
 
 const colDefs = [
-  { header: 'Id', field: 'id' },
   { header: 'Name', field: 'name' },
   { header: 'Occupation', field: 'occupation' },
   { header: 'Hobby', field: 'hobby' },
