@@ -1,11 +1,5 @@
 import React from 'react'
-
 import styled from 'styled-components'
-
-// const FilterWrapper = styled.div`
-//   width: 100%;
-// `
-// FilterWrapper.displayName = 'FilterWrapper'
 
 const FilterIconInnerWrapper = styled.div`
   max-width: 1.25em;

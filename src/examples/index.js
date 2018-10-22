@@ -1,12 +1,26 @@
 import React, { Fragment } from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import styled from 'styled-components'
+import { BrowserRouter, Link, Route } from 'react-router-dom'
 import Table from '@table'
+
+const PageHeader = styled.h3`
+  margin-left: ${({ inset }) => (inset ? '50px' : '1.5em')};
+  display: inline;
+`
 
 import examplesData from '@examples/data'
 
 const Examples = () => (
   <BrowserRouter>
     <Fragment>
+      {/* navbar */}
+      <div>
+        {Object.keys(examplesData).map((example, i) => (
+          <PageHeader inset={!i}>
+            <Link to={example}>{`${example} Example`}</Link>
+          </PageHeader>
+        ))}
+      </div>
       {/* home */}
       <Route
         exact
@@ -26,7 +40,6 @@ const Example = ({ example }) => (
     path={`/${example}`}
     component={() => (
       <Fragment>
-        <h3 style={{ marginLeft: '50px' }}>{`${example} Example`}</h3>
         <Table {...examplesData[example]} />
       </Fragment>
     )}

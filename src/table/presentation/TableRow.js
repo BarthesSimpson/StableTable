@@ -11,7 +11,7 @@ const TableCellIcon = ({ icon }) => (
 
 const TableCell = ({ className, content, icon, onClick }) => (
   <td className={className} onClick={onClick}>
-    {content} {icon && <TableCellIcon icon={icon} />}
+    {content}{icon && <TableCellIcon icon={icon} />}
   </td>
 )
 
