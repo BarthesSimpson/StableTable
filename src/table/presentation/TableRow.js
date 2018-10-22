@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const TableCellIconWrapper = styled.span`
   font-size: 0.5em;
-  line-height: 2em;
+  padding-left: 0.25em;
 `
 const TableCellIcon = ({ icon }) => (
   <TableCellIconWrapper>{icon}</TableCellIconWrapper>
@@ -11,7 +11,8 @@ const TableCellIcon = ({ icon }) => (
 
 const TableCell = ({ className, content, icon, onClick }) => (
   <td className={className} onClick={onClick}>
-    {content}{icon && <TableCellIcon icon={icon} />}
+    {content}
+    {icon && <TableCellIcon icon={icon} />}
   </td>
 )
 
