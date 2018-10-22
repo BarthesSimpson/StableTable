@@ -1,9 +1,8 @@
 # StableTable:TODO
 
-1. Add indent and icons for tree data
-2. Add tests for tree data
-3. Granularity for the TableRow onClicks
-4. Smarter filtering for tree data
+1. Add tests for tree data
+2. Granularity for the TableRow onClicks
+3. Smarter filtering for tree data
 
 ## Later
 
