@@ -13,14 +13,26 @@ class ExpandableTableRow extends React.Component {
   }
 
   render() {
-    const { row, children, colDefs } = this.props
+    const { row, children, colDefs, groupBy } = this.props
     const { expanded } = this.state
     return (
       <Fragment>
-        <TableRow row={row} colDefs={colDefs} onClick={this.toggleExpanded} />
+        <TableRow
+          colDefs={colDefs}
+          groupBy={groupBy}
+          hasChildren={children.length}
+          onClick={this.toggleExpanded}
+          row={row}
+        />
         {expanded &&
           children.map((childRow, i) => (
-            <ExpandableTableRow key={i} colDefs={colDefs} {...childRow} />
+            <ExpandableTableRow
+              colDefs={colDefs}
+              expanded={expanded}
+              groupBy={groupBy}
+              key={i}
+              {...childRow}
+            />
           ))}
       </Fragment>
     )

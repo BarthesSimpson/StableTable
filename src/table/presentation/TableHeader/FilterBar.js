@@ -2,10 +2,10 @@ import React from 'react'
 
 import styled from 'styled-components'
 
-const FilterWrapper = styled.div`
-  display: flex;
-`
-FilterWrapper.displayName = 'FilterWrapper'
+// const FilterWrapper = styled.div`
+//   width: 100%;
+// `
+// FilterWrapper.displayName = 'FilterWrapper'
 
 const FilterIconInnerWrapper = styled.div`
   max-width: 1.25em;
@@ -19,19 +19,21 @@ const FilterIconInnerWrapper = styled.div`
 FilterIconInnerWrapper.displayName = 'FilterIconInnerWrapper'
 
 const FilterIconOuterWrapper = styled.div`
-  flex: 1;
+  float: right;
   margin-top: -0.125em;
-  margin-left: -0.75em;
+  margin-left: -1.25em;
+  padding-right: 0.25em;
 `
 FilterIconOuterWrapper.displayName = 'FilterIconOuterWrapper'
 
 const FilterInput = styled.input`
-  flex: 4;
+  width: 100%;
   border: 1px solid #ddd;
-  padding-right: 1em;
+  padding: 0.25em 1.5em 0.25em 0.5em;
+  box-sizing: border-box;
+  width: 100%;
 `
 FilterInput.displayName = 'FilterInput'
-
 
 const FilterIcon = () => (
   <FilterIconOuterWrapper>
@@ -46,7 +48,6 @@ const FilterBar = ({ colDefs, filterOnField }) => (
         <FilterCell
           key={field}
           filter={value => {
-            // console.log({ field, value })
             filterOnField({ field, value })
           }}
         />
@@ -58,13 +59,11 @@ const FilterBar = ({ colDefs, filterOnField }) => (
 const FilterCell = ({ filter }) => {
   return (
     <th>
-      <FilterWrapper>
-        <FilterInput
-          type="search"
-          onChange={({ target: { value } }) => filter(value)}
-        />
-        <FilterIcon />
-      </FilterWrapper>
+      <FilterInput
+        type="search"
+        onChange={({ target: { value } }) => filter(value)}
+      />
+      <FilterIcon />
     </th>
   )
 }

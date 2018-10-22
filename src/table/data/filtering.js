@@ -14,10 +14,13 @@ export const filterRowsOnField = ({ rows, field, value = '' }) => {
   // filtering is always case insensitive
   const filterValue = value.toString().toLowerCase()
 
-  return rows.filter(({ [field]: datum }) =>
-    datum
-      .toString()
-      .toLowerCase()
-      .includes(filterValue)
+  return rows.filter(
+    ({ [field]: datum }) =>
+      datum
+        ? datum
+            .toString()
+            .toLowerCase()
+            .includes(filterValue)
+        : false
   )
 }

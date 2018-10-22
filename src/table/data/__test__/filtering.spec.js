@@ -36,4 +36,13 @@ describe('Filtering tests', () => {
       }).map(({ name }) => name)
     ).toEqual(['Gerald'])
   })
+  it('Handles undefined values when filtering', () => {
+    expect(
+      filterRowsOnField({
+        rows: [...rowData, { name: 'Dr. Cat' }],
+        field: 'introverted',
+        value: true
+      }).map(({ name }) => name)
+    ).toEqual(['Gerald'])
+  })
 })

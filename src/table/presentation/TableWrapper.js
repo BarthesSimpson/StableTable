@@ -4,14 +4,14 @@ import styled from 'styled-components'
 const TableWrapper = styled.div`
   table {
     margin: 50px;
-    td,
-    th {
-      text-align: left;
-    }
-    td {
-      padding: 0.25em;
-    }
   }
+  td,
+  th {
+    text-align: left;
+  }
+  /* td {
+    padding: 0.25em;
+  } */
 
   tbody tr:hover {
     background: #ddd;
