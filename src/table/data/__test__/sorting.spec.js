@@ -1,6 +1,6 @@
 import { sortRowsByField } from '@data/sorting'
 
-import data from '@examples/data/boring'
+import data from '@examples/data/basic'
 const { rowData } = data
 
 describe('Sorting tests', () => {

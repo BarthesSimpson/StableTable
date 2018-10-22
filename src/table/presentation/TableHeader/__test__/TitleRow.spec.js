@@ -3,7 +3,7 @@ import { render, fireEvent, cleanup } from 'react-testing-library'
 import 'jest-dom/extend-expect'
 
 import Table from '@table'
-import data from '@examples/data/boring'
+import data from '@examples/data/basic'
 
 const testTable = () => <Table {...data} />
 afterEach(cleanup)

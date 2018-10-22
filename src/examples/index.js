@@ -25,7 +25,7 @@ const Examples = () => (
       <Route
         exact
         path="/"
-        component={() => <Table {...examplesData.boring} />}
+        component={() => <Table {...examplesData.basic} />}
       />
       {/* a route for each example */}
       {Object.keys(examplesData).map(example => (

@@ -1,7 +1,7 @@
-import boring from './boring'
+import basic from './basic'
 import treeData from './treeData'
 
 export default {
-  boring,
+  basic,
   treeData
 }

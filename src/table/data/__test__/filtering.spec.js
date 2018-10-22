@@ -1,6 +1,6 @@
 import { filterRowsOnField } from '@data/filtering'
 
-import data from '@examples/data/boring'
+import data from '@examples/data/basic'
 const { rowData } = data
 
 describe('Filtering tests', () => {
