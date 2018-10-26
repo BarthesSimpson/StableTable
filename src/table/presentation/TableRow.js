@@ -1,18 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const TableCellIconWrapper = styled.span`
-  font-size: 0.5em;
-  padding-left: 0.25em;
-`
-const TableCellIcon = ({ icon }) => (
-  <TableCellIconWrapper>{icon}</TableCellIconWrapper>
-)
+const TableCell = ({ className, content, onClick, showIcon }) => (
+  // <td className={className} onClick={onClick}>
 
-const TableCell = ({ className, content, icon, onClick }) => (
-  <td className={className} onClick={onClick}>
+  <td
+    className={showIcon ? `${className} expandable` : className}
+    onClick={onClick}
+  >
     {content}
-    {icon && <TableCellIcon icon={icon} />}
   </td>
 )
 
@@ -30,7 +26,7 @@ const TableRow = ({ colDefs, groupBy, hasChildren, onClick, row }) => (
         key={field}
         row={row}
         inset={groupBy === field}
-        icon={groupBy === field && hasChildren ? '▽' : false}
+        showIcon={groupBy === field && hasChildren}
       />
     ))}
   </tr>

@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'fontawesome';
+  font-weight: normal;
+  font-style: normal;
+  src: url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0');
+  src: url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0')
+      format('embedded-opentype'),
+    url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0')
+      format('woff2'),
+    url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0')
+      format('woff'),
+    url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0')
+      format('truetype'),
+    url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular')
+      format('svg');
+}
+
+body {
+  background-color: #f8f8f8;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+table {
+  margin: 50px;
+}
+
+table,
+table > * {
+  box-sizing: border-box;
+}
+
+th,
+td {
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+}
+
+/* #0091ea */
+
+tbody tr:hover {
+  background: #ddd;
+}
+
+tbody tr:nth-child(odd) {
+  background: #eee;
+}
+
+tbody tr:nth-child(odd):hover {
+  background: #ddd;
+}
+
+table.border td,
+table.border th {
+  border: 1px solid #bdc3c7;
+}
+
+th.sorting,
+th.sorting_asc,
+th.sorting_desc {
+  padding: 0.375em;
+  padding-left: 0.25em;
+}
+
+th.sorting_asc:after {
+  content: '\f0de';
+  float: right;
+  font-family: fontawesome;
+  padding-right: 0.25em;
+  font-size: 0.75em;
+  line-height: 1.5em;
+}
+th.sorting_desc:after {
+  content: '\f0dd';
+  float: right;
+  font-family: fontawesome;
+  padding-right: 0.25em;
+  font-size: 0.75em;
+  line-height: 1.5em;
+}
+th.sorting:after {
+  content: '\f0dc';
+  float: right;
+  font-family: fontawesome;
+  color: rgba(50, 50, 50, 0.5);
+  padding-right: 0.25em;
+  font-size: 0.75em;
+  line-height: 1.5em;
+}
+
+td.expandable:before {
+  content: '\f078';
+  color: rgba(50, 50, 50, 0.5);
+  float: left;
+  font-family: fontawesome;
+  padding-left: 0.25em;
+  padding-right: 0.5em;
+  font-size: 0.75em;
+  line-height: 1.5em;
+}

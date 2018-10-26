@@ -7,6 +7,7 @@ const PageHeader = styled.h3`
   margin-left: ${({ inset }) => (inset ? '50px' : '1.5em')};
   display: inline;
 `
+import 'static/styles.css'
 
 import examplesData from '@examples/data'
 
@@ -16,7 +17,7 @@ const Examples = () => (
       {/* navbar */}
       <div>
         {Object.keys(examplesData).map((example, i) => (
-          <PageHeader inset={!i}>
+          <PageHeader key={example} inset={!i}>
             <Link to={example}>{`${example} Example`}</Link>
           </PageHeader>
         ))}
