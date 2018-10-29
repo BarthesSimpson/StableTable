@@ -11,6 +11,7 @@ describe('Sorting tests', () => {
       )
     ).toEqual(['Pigeon', 'Piggie', 'Gerald'])
   })
+
   it('Sorts numbers in descending order', () => {
     expect(
       sortRowsByField({
@@ -20,6 +21,7 @@ describe('Sorting tests', () => {
       }).map(({ name }) => name)
     ).toEqual(['Gerald', 'Piggie', 'Pigeon'])
   })
+
   it('Sorts strings in ascending order', () => {
     expect(
       sortRowsByField({ rows: [...rowData], field: 'name' }).map(
@@ -27,6 +29,7 @@ describe('Sorting tests', () => {
       )
     ).toEqual(['Gerald', 'Pigeon', 'Piggie'])
   })
+
   it('Sorts strings in descending order', () => {
     expect(
       sortRowsByField({
@@ -36,6 +39,7 @@ describe('Sorting tests', () => {
       }).map(({ name }) => name)
     ).toEqual(['Piggie', 'Pigeon', 'Gerald'])
   })
+
   it('Sorts booleans in ascending order', () => {
     expect(
       sortRowsByField({ rows: [...rowData], field: 'introverted' }).map(
@@ -43,6 +47,7 @@ describe('Sorting tests', () => {
       )
     ).toEqual(['Pigeon', 'Piggie', 'Gerald'])
   })
+
   it('Sorts strings in descending order', () => {
     expect(
       sortRowsByField({
@@ -50,6 +55,6 @@ describe('Sorting tests', () => {
         field: 'introverted',
         descending: true
       }).map(({ name }) => name)
-    ).toEqual([ 'Gerald', 'Pigeon', 'Piggie',])
+    ).toEqual(['Gerald', 'Pigeon', 'Piggie'])
   })
 })

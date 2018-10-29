@@ -4,7 +4,7 @@ import { FlatData, TreeData } from '@data'
 const TableBody = ({ rows, colDefs, groupBy }) => (
   <tbody>
     {groupBy ? (
-      <TreeData rows={rows} colDefs={colDefs} groupBy={groupBy} />
+      <TreeData rowTree={rows} colDefs={colDefs} groupBy={groupBy} />
     ) : (
       <FlatData rows={rows} colDefs={colDefs} />
     )}

@@ -1,8 +1,8 @@
 # StableTable:TODO
 
-1. Add tests for tree data
+1. Add more tests for tree data
 2. Granularity for the TableRow onClicks
-3. Smarter filtering for tree data
+3. Documentation throughout the nation
 
 ## Later
 

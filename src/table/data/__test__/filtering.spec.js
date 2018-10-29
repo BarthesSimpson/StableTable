@@ -4,6 +4,7 @@ import data from '@examples/data/basic'
 const { rowData } = data
 
 describe('Filtering tests', () => {
+
   it('Filters text rows', () => {
     expect(
       filterRowsOnField({ rows: [...rowData], field: 'name', value: 'Pi' }).map(
@@ -11,6 +12,7 @@ describe('Filtering tests', () => {
       )
     ).toEqual(['Pigeon', 'Piggie'])
   })
+
   it('Filters text rows case insensitively', () => {
     expect(
       filterRowsOnField({ rows: [...rowData], field: 'name', value: 'pi' }).map(
@@ -18,6 +20,7 @@ describe('Filtering tests', () => {
       )
     ).toEqual(['Pigeon', 'Piggie'])
   })
+
   it('Filters numerical rows', () => {
     expect(
       filterRowsOnField({
@@ -27,6 +30,7 @@ describe('Filtering tests', () => {
       }).map(({ name }) => name)
     ).toEqual(['Pigeon'])
   })
+
   it('Filters boolean rows', () => {
     expect(
       filterRowsOnField({
@@ -36,6 +40,7 @@ describe('Filtering tests', () => {
       }).map(({ name }) => name)
     ).toEqual(['Gerald'])
   })
+
   it('Handles undefined values when filtering', () => {
     expect(
       filterRowsOnField({
@@ -45,4 +50,5 @@ describe('Filtering tests', () => {
       }).map(({ name }) => name)
     ).toEqual(['Gerald'])
   })
+  
 })

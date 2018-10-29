@@ -9,8 +9,6 @@ export const sortRowsByField = ({ rows, field, descending = false }) => {
    */
 
   const dataType = inferDataType({ rows, field })
-  // console.log('sorting', rows, 'by', field)
-  // console.log(dataType)
   switch (dataType) {
     case 'string':
       if (descending) {

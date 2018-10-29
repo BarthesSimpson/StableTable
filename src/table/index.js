@@ -5,7 +5,7 @@ import { TableBody, TableHeader } from '@presentation'
 
 const StableTable = ({ rowData, colDefs, tableOptions: { groupBy } }) => {
   return (
-    <DataStore rowData={rowData}>
+    <DataStore rowData={rowData} groupBy={groupBy}>
       {({ rows, sortByField, filterOnField }) => {
         return (
           <table>

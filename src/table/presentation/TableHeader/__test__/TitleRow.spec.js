@@ -19,6 +19,7 @@ describe('TitleRow tests', () => {
       .map(cell => cell.innerHTML)
     expect(names).toEqual(['Gerald', 'Pigeon', 'Piggie'])
   })
+
   it('Sorts descending when user clicks column header a second time', () => {
     const { getByText, container } = render(testTable())
     fireEvent.click(getByText('Name'))

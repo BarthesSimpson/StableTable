@@ -23,6 +23,7 @@ describe('FilterBar tests', () => {
       .map(cell => cell.innerHTML)
     expect(names).toEqual(['Pigeon', 'Piggie'])
   })
+
   it('Removes filter when user clears input', () => {
     const { container } = render(testTable())
     const nameFilter = container
