@@ -1,25 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const FilterIconInnerWrapper = styled.div`
-  max-width: 1.25em;
-  max-height: 1.25em;
-  overflow: hidden;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-`
-FilterIconInnerWrapper.displayName = 'FilterIconInnerWrapper'
-
-const FilterIconOuterWrapper = styled.div`
-  float: right;
-  margin-top: -0.125em;
-  margin-left: -1.25em;
-  padding-right: 0.25em;
-`
-FilterIconOuterWrapper.displayName = 'FilterIconOuterWrapper'
-
 const FilterInput = styled.input`
   width: 100%;
   border: 1px solid #ddd;
@@ -29,11 +10,7 @@ const FilterInput = styled.input`
 `
 FilterInput.displayName = 'FilterInput'
 
-const FilterIcon = () => (
-  <FilterIconOuterWrapper>
-    <FilterIconInnerWrapper>&#9906;</FilterIconInnerWrapper>
-  </FilterIconOuterWrapper>
-)
+import { FilterIcon } from '@presentation/Icons'
 
 const FilterBar = ({ colDefs, filterOnField }) => (
   <tr>
@@ -53,11 +30,11 @@ const FilterBar = ({ colDefs, filterOnField }) => (
 const FilterCell = ({ filter }) => {
   return (
     <th>
+      <FilterIcon />
       <FilterInput
         type="search"
         onChange={({ target: { value } }) => filter(value)}
       />
-      <FilterIcon />
     </th>
   )
 }

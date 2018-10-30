@@ -1,20 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const IconWrapper = styled.span`
-  color: rgba(50, 50, 50, 0.5);
-  float: left;
-  font-family: fontawesome;
-  padding-left: 0.25em;
-  padding-right: 0.5em;
-  font-size: 0.75em;
-  line-height: 1.5em;
-`
-const ExpandableIcon = ({ onClick }) => (
-  <IconWrapper onClick={onClick}>
-    <i className="fa fa-chevron-down" />
-  </IconWrapper>
-)
+import {ExpandableIcon} from '@presentation/Icons'
 
 const TableCell = ({ className, content, onClick, onIconClick, showIcon }) => (
   <td className={className} onClick={onClick}>
