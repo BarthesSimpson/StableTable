@@ -1,14 +1,16 @@
 # StableTable:TODO
 
-1. Prevent tree data from crashing when filters remove all rows!
-2. Add more tests for tree data
-3. Granularity for the TableRow onClicks
-4. Documentation throughout the nation
+1. Try many rows
+2. Try many columns
+3. Basic Documentation
+4. Inferred groupings
+5. Documentation throughout the nation
+6. Pagination
 
 ## Later
 
 1. Add theming
 2. Nested field accessor
 3. Function field accessor
-4. Pagination
-5. Additional filter types
+4. Additional filter types
+5. More granularity for the TableRow onClicks

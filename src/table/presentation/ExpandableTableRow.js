@@ -21,7 +21,7 @@ class ExpandableTableRow extends React.Component {
           colDefs={colDefs}
           groupBy={groupBy}
           hasChildren={children.length}
-          onClick={this.toggleExpanded}
+          onIconClick={this.toggleExpanded}
           row={row}
         />
         {expanded &&
