@@ -50,6 +50,11 @@ export const applyFiltersToTreeNode = ({ node, filters }) => {
     if (filteredChildren.length) {
       return { ...node, children: filteredChildren }
     } else {
+      // edge case where all rows were filtered and we are just left
+      // with the tree root
+      if (row === null) return { ...node, children: [] }
+      // otherwise, all the children got filtered but
+      // we are not at the root, so test the row
       return applyFiltersToRow({ row, filters })
         ? { ...node, children: [] }
         : false

@@ -1,8 +1,9 @@
 # StableTable:TODO
 
-1. Add more tests for tree data
-2. Granularity for the TableRow onClicks
-3. Documentation throughout the nation
+1. Prevent tree data from crashing when filters remove all rows!
+2. Add more tests for tree data
+3. Granularity for the TableRow onClicks
+4. Documentation throughout the nation
 
 ## Later
 
