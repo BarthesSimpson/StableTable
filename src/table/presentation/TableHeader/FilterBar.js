@@ -7,6 +7,7 @@ const FilterInput = styled.input`
   padding: 0.25em 1.5em 0.25em 0.5em;
   box-sizing: border-box;
   width: 100%;
+  border-radius: 2px;
 `
 FilterInput.displayName = 'FilterInput'
 

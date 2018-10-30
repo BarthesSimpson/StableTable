@@ -1,10 +1,13 @@
 # StableTable:TODO
 
 1. Pagination for many rows
-2. Fit column widths to content for many columns
+2. Fit column widths to content (and header)
 3. Basic Documentation
 4. Inferred groupings
 5. Documentation throughout the nation
+6. Right-align numbers (and their headers)
+7. Try no fills theme
+8. Switch to cards on mobile!
 
 ## Later
 
